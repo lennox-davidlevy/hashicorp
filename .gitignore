@@ -1,3 +1,5 @@
 *.DS_Store
 *.tfstate
 .DS_Store
+
+*_logs/

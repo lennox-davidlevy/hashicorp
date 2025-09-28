@@ -13,9 +13,9 @@ bind_addr = "0.0.0.0"
 
 advertise {
   # Defaults to the first private IP address.
-  http = "10.0.103.60" # must be reachable by Nomad CLI clients
-  rpc  = "10.0.103.60" # must be reachable by Nomad client nodes
-  serf = "10.0.103.60" # must be reachable by Nomad server nodes
+  http = "192.168.252.112" # must be reachable by Nomad CLI clients
+  rpc  = "192.168.252.112" # must be reachable by Nomad client nodes
+  serf = "192.168.252.112" # must be reachable by Nomad server nodes
 }
 
 ports {
@@ -51,11 +51,12 @@ client {
   enabled = true
 
   server_join {
-    retry_join = ["provider=aws tag_key=nomad_cluster_id tag_value=us-east-1"]
+    retry_join = ["192.168.252.107", "192.168.252.108", "192.168.252.109", "192.168.252.110", "192.168.252.111"]
   }
+}
 
-  meta {
-    team = "it-ops"
-    environment = "prod-cluster"
-  }
+consul {
+  auto_advertise   = false
+  server_auto_join = false
+  client_auto_join = false
 }
