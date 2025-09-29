@@ -9,10 +9,10 @@ job "tetris" {
         to = 80
       }
     }
-    
+
     spread {
       attribute = "${node.datacenter}"
-      
+
       target "dc1" {
         percent = 70
       }

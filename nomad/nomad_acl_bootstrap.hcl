@@ -1,0 +1,11 @@
+Accessor ID  = ce1c746b-8e9c-5a93-73da-3334bccd8dde
+Secret ID    = 47276946-0bf9-37d3-fdd6-4c764ba87502
+Name         = Bootstrap Token
+Type         = management
+Global       = true
+Create Time  = 2025-09-29 01:15:37.931420662 +0000 UTC
+Expiry Time  = <none>
+Create Index = 2014
+Modify Index = 2014
+Policies     = n/a
+Roles        = n/a

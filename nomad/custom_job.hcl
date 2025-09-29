@@ -1,11 +1,12 @@
 job "tetris" {
-  datacenters = ["dc1", "dc2"]
+  datacenters = ["dc1"]
 
   group "games" {
     count = 5
 
     network {
-      port "web" {
+      mode = "host"
+      port "http" {
         to = 80
       }
     }
@@ -14,16 +15,14 @@ job "tetris" {
       driver = "docker"
 
       config {
-        image          = "bsord/tetris"
-        ports          = ["web"]
-        auth_soft_fail = true
+        image = "bsord/tetris"
+        ports = ["http"]
       }
 
       resources {
         cpu    = 50
-        memory = 256
+        memory = 50
       }
     }
   }
 }
-

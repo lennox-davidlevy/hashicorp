@@ -25,9 +25,9 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker nomad
 sudo mkdir -p /etc/nomad.d
-sudo chown nomad:nomad /etc/nomad.d
 sudo mkdir -p /etc/nomad.d/data
-sudo chown nomad:nomad /etc/nomad.d/data
+sudo chown -R nomad:nomad /etc/nomad.d
+# sudo chown nomad:nomad /etc/nomad.d/data
 "
 
 echo "Starting Nomad installation on ${#CLIENTS[@]} clients"
